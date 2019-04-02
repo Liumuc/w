@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool flag;
+int i,n,x,a,b;
+int main()
+{
+	cin>>n;
+	for(i=10;i<=n;i++)
+	{
+		x=i;
+		while(x)
+		{
+			a=x%10;
+			x/=10;
+			b=b*10+a;
+		}
+		if(b==i)
+		{
+			if(flag) cout<<" ";
+			flag=1;
+			cout<<i;
+		}
+		b=0;
+	}
+	return 0;
+}

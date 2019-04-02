@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+int a[100005],m,n,sum,mid,l,r,s;
+int main()
+{
+    cin>>n>>m//本代码使用分治算法解决，若不能理解分治算法的基本思想，请勿抄袭！为自己带来不必要的损失！
+    for(int i=0;i<n;i++)
+    {
+		cin>>a[i];
+        r+=a[i];//计算最右端点。
+        if(a[i]>l) l=a[i];//计算最左端点。
+    }
+    while(l<r)//二分条件成立。
+    {
+        mid=(l+r)/2;//计算当前中点。
+        sum=1;
+        s=0;
+        for(int i=0;i<n;i++)//统计总钱数。
+        {
+            s+=a[i];
+            if(s>mid)
+            {
+                sum++;
+                s=a[i];
+            }
+            if(sum>m) break;//如果赊账了，说明该方案不行，结束统计，更改端点。
+        }
+        if(sum>m) l=mid+1;//右移左端点。
+        else r=mid;//左移右端点。
+    }
+    cout<<l;//输出l和r中的一个端点就行。
+    return 0;
+}

@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+int i,n,a,ans,sum;
+int main()
+{
+    cin>>n;
+    for(i=0;i<n;i++)
+    {
+        cin>>a;
+        if(a>0)
+        {
+            sum+=a;
+            ans++;
+        }
+    }
+    cout<<sum<<endl<<ans;
+    return 0;
+}

@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+int i,j,k,n,a,b,c;
+int main()
+{
+    cin>>n;
+    n-=2;//题目中说“给定的测试数据中 n 一定是偶数”，三个奇数之和必为奇数，所以一定有2。
+    for(i=n/2;i<=n;i++)//和一定差小积大。
+    {
+        for(j=2;j<i;j++) if(!(i%j)) break;//i被j整除说明i是合数。
+        if(j==i)//j自增到i,i是素数
+        {
+            for(k=2;k<n-i;k++) if(!((n-i)%k)) break;//(n-i)被k整除说明(n-i)是合数。
+
+            if(k==n-i)//k自增到(n-i)说明(n-i)是素数。
+
+            {
+
+                cout<<i*(n-i)*2;//输出找到两数和2的积。
+
+                break;//退出。
+
+            }
+
+        }
+
+    }
+
+    return 0;
+
+}

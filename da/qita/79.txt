@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int m,k,sum;
+int main()
+{
+    cin>>m>>k;
+    while(!(m%3))
+    {
+        m/=3;
+        sum++;
+    }
+    if(sum==k) cout<<"yes";
+    else cout<<"no";
+}

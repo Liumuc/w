@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int i,j,a,n,sum,ans;
+int main()
+{
+    cin>>a>>n; 
+    for(i=1;i<=n;i++)。
+    {
+        for(j=0;j<i;j++) sum=sum*10+a;//计算当前数。
+        ans+=sum;//累加当前数。
+        sum=0;//清空计算数的变量。
+    }
+    printf("%d",ans);
+    return 0;
+}

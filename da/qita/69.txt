@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+int i,n,x,a,b;
+int main()
+{
+	cin>>n;
+    x=n;
+    for(i=0;i<n;i++)
+    {
+        a=x%10;
+        x/=10;
+        b=b*10+a;
+    }
+    if(b==n) cout<<"yes";
+    else cout<<"no";
+    return 0;
+}

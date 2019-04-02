@@ -1,0 +1,11 @@
+#include<bits/stdc++.h>
+using namespace std;
+int n,ans;
+int main()
+{
+	cin>>n;
+	for(int i=1;i<=(n/2);i++)//到n÷2就行了，因为一个正整数的正整数因子最大到n÷2。//
+	if(!(n%i)) ans=i;//i能被n整除说明它是n的因子。
+	cout<<ans;
+	return 0;
+}

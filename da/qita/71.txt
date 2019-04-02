@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int m,n,sum;
+int main()
+{
+    cin>>m;
+    while((1+n)*n/2<m)
+    {
+        sum=(1+n)*n/2;
+        n++;
+    }
+   	cout<<n-1<<sum;
+    return 0;
+}

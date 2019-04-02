@@ -1,0 +1,11 @@
+#include<bits/stdc++.h>
+ using namespace std; 
+long long a[105][105],n,m;//Ô½ÍùÏÂ·Ö×ÓÔ½´ó£¬±ÜÃâÕ¨µô¡£ 
+int main() {   
+  a[1][1]=1;     scanf("%lld%lld",&n,&m);   
+  for(long long i=1;i<=n;i++)//±¾Ìâ¿ÉÒÔÖ»¼ÆËã·ÖÄ¸£¬±ÜÃâ¾«¶È²»¹»¡£  
+   {         for(long long j=1;j<=i;j++)         {           
+  if(j==1) a[i][j]=i;//×óÓÒÁ½±ßÎª1/1,1/2,1/3¡­¡­            
+ else a[i][j]=a[i-1][j-1]*a[i][j-1]/(a[i][j-1]-a[i-1][j-1]);//µÚxÐÐµÄµÚa¡¢b¸öÊýÏà¼Ó¾ÍµÈÓÚµÚx-1ÐÐµÄµÚa¸öÊý¡£    
+     }     }     printf("1/%lld",a[n][m]);//Êä³öµÚnÐÐmÁÐ¡£   
+  return 0; }

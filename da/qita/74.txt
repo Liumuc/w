@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+int i,n,cnt,sum;
+int main()
+{
+	cin>>n;
+	for(i=1;i<=n;i++)
+	{
+		if(!(n%i))
+		{
+			sum+=i;
+			cnt++;
+		}
+	}
+	cout<<cnt<<" "<<sum
+}

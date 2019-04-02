@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+int i,n,ans;
+int main()
+{
+    while(cin>>n)//循环条件也可以是输入 
+    {
+        ans+=n;//累加当前数。
+        if(cin.get()=='\n') break;//当遇到换行时结束，\n表示换行 
+    }
+    cout<<ans;
+    return 0;
+}
